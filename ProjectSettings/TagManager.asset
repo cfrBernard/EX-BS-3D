@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - Ground
+  - Fence
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
