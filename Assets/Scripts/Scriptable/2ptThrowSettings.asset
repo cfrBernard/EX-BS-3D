@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 2ptThrowSettings
   m_EditorClassIdentifier: 
   angleUpward: 0
-  horizontalInfluence: 0.02
-  verticalInfluence: 0.02
-  minThrowPower: 1
+  horizontalInfluence: 0
+  verticalInfluence: 0.0372
+  minThrowPower: 6.86
   maxThrowPower: 10
   powerMultiplier: 0.1
+  releaseDelay: 0
+  spin: 50

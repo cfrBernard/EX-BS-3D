@@ -62,13 +62,17 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: e9187902dac17d64ba4d49aa56afee57
+    name: EnvVolume
+  - guid: 3b41031761b390145ab118e390877cf2
+    name: SFXVolume
   m_AudioMixerGroupViews:
   - guids:
     - ddc7740b2e3210047a709d653ecc9571
     - 29cf4d385641fe541a93f868473f7fc2
-    - 24e1c14f5a389c8468635457ddd1b3c9
     - 4a0390f367d5bab44957819011f0f090
+    - 24e1c14f5a389c8468635457ddd1b3c9
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -82,9 +86,9 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: ddc7740b2e3210047a709d653ecc9571
   m_Children:
+  - {fileID: 3919335221935857120}
   - {fileID: 3120231208003875143}
   - {fileID: -8022078054096538890}
-  - {fileID: 3919335221935857120}
   m_Volume: df1dd507097e29a418b90fdecfc29116
   m_Pitch: edb4f0b91bbaedb4c9cd33d70e78d782
   m_Send: 00000000000000000000000000000000
@@ -144,7 +148,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Environment
+  m_Name: Env
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 24e1c14f5a389c8468635457ddd1b3c9
   m_Children: []
