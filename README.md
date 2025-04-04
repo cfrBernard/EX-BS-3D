@@ -15,18 +15,6 @@ Due to time constraints and learning goals, the project uses a single-scene setu
 
 ---
 
-### v1.0.0
-
-<p align="center">
-  <img src="Demo/Unity_mkhZosjvBj.png" alt="v1.0.0" />
-</p>
-
-<p align="center">
-  <img src="Demo/Unity_gUPxNjiVh2.png" alt="v1.0.0" />
-</p>
-
----
-
 ## 📸 Features
 
 - Fully physics-based throwing system (with spin, velocity and input influence)
@@ -39,6 +27,14 @@ Due to time constraints and learning goals, the project uses a single-scene setu
 
 - **Unity (URP)**: Game engine
 - **C#**: Primary language
+
+---
+
+### v1.0.0
+
+<p align="center">
+  <img src="Demo/Unity_gUPxNjiVh2.png" alt="v1.0.0" />
+</p>
 
 ---
 
