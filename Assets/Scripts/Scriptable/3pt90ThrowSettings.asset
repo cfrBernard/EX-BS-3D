@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c432c6975546ff44b7f36dd4d5c866c, type: 3}
-  m_Name: 3ptThrowSettings
+  m_Name: 3pt90ThrowSettings
   m_EditorClassIdentifier: 
-  angleUpward: 0.029
+  angleUpward: 0
   horizontalInfluence: 0.0029
-  verticalInfluence: 0.0234
-  minThrowPower: 8.1
+  verticalInfluence: 0.0255
+  minThrowPower: 7.5
   maxThrowPower: 10
   powerMultiplier: 0.10082798
   releaseDelay: 0.05

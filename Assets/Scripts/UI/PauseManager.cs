@@ -10,6 +10,7 @@ public class PauseManager : MonoBehaviour
     public TextMeshProUGUI sensitivityValueText;
     
     private bool isPaused = false;
+    private bool hasGameStarted = false;
     private BallGrabber ballGrabber;
 
     void Start()
@@ -44,6 +45,12 @@ public class PauseManager : MonoBehaviour
         isPaused = !isPaused;
         pauseMenu.SetActive(isPaused);
         Time.timeScale = isPaused ? 0 : 1;
+
+        if (!isPaused && !hasGameStarted)
+        {
+            hasGameStarted = true;
+            GameManager.Instance.StartGame();
+        }
     }
 
     public void OpenHelpMenu()

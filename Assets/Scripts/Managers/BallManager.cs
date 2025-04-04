@@ -80,14 +80,9 @@ public class BallManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            GetBall();
-        }
-
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ResetBalls();
+            GetBall();
         }
     }
 }

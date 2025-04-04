@@ -7,6 +7,9 @@ TagManager:
   - Ball
   - Ground
   - Fence
+  - Hoop
+  - Backboard
+  - Pole
   layers:
   - Default
   - TransparentFX

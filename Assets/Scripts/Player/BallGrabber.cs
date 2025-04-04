@@ -10,6 +10,9 @@ public class BallGrabber : MonoBehaviour
     public float maxOffsetZ = 0.5f;
     public BallThrowSettings throwSettings;
 
+    public AudioClip grabSound;
+    public AudioSource audioSource;
+
     private GameObject grabbedBall = null;
     private Rigidbody grabbedRb;
     private bool isGrabbing = false;
@@ -28,7 +31,7 @@ public class BallGrabber : MonoBehaviour
         RaycastHit hit;
         Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, 20f))  // Grab distance limited
+        if (Physics.Raycast(ray, out hit, 20f))  // Grab distance
         {
             if (hit.collider.CompareTag("Ball"))
             {
@@ -39,6 +42,11 @@ public class BallGrabber : MonoBehaviour
                 grabbedRb.linearVelocity = Vector3.zero;
                 isGrabbing = true;
                 lastMousePosition = Input.mousePosition;
+
+                if (grabSound != null)
+                {
+                    audioSource.PlayOneShot(grabSound);
+                }
             }
         }
     }
@@ -46,26 +54,20 @@ public class BallGrabber : MonoBehaviour
     void HoldBall()
     {
         if (grabbedBall == null) return;
-    
+
         // Calculate vertical mouse position (between 0 and 1)
         float mouseYNormalized = Mathf.Clamp01(Input.mousePosition.y / Screen.height);
-    
-        // Calculate the offset based on mouse height
         float yOffset = Mathf.Lerp(0, maxOffsetY, mouseYNormalized);
         float zOffset = Mathf.Lerp(0, maxOffsetZ, mouseYNormalized);
-    
+
         // Local offset
         Vector3 localOffset = new Vector3(0, yOffset, zOffset);
-    
-        // Convert local offset to global coordinates
         Vector3 worldOffset = throwPoint.TransformDirection(localOffset);
-    
-        // New ball position considering the angle
         Vector3 targetPosition = throwPoint.position + worldOffset;
-    
+
         // Gradual movement
         grabbedBall.transform.position = Vector3.Lerp(grabbedBall.transform.position, targetPosition, Time.deltaTime * grabSpeed);
-    
+
         // Calculate mouse movement speed
         Vector3 deltaMouse = Input.mousePosition - lastMousePosition;
         mouseVelocity = deltaMouse * sensitivity;
@@ -95,8 +97,10 @@ public class BallGrabber : MonoBehaviour
         grabbedRb.AddTorque(playerCamera.transform.right * throwSettings.spin);
 
         grabbedRb.linearVelocity = throwDirection * throwStrength;
+        ScoreManager.Instance.IncrementThrowCount();
 
         grabbedBall = null;
         isGrabbing = false;
     }
+
 }

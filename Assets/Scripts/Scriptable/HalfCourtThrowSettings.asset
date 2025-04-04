@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleUpward: 0
   horizontalInfluence: 0.005
-  verticalInfluence: 0.01
-  minThrowPower: 0
+  verticalInfluence: 0.0102
+  minThrowPower: 9.16
   maxThrowPower: 10
   powerMultiplier: 0.1
   releaseDelay: 0.05
