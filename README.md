@@ -1,7 +1,4 @@
-
-
-
-# 🏀 Basketball arcade game
+# Basketball arcade game
 This project is a small physics-based basketball arcade game, made as a first experiment with Unity 3D. It was developed solo in under a week, with a focus on game feel, polish, and rapid iteration. While the code is open source, the full Unity project isn’t — it relies on a private submodule for assets (sounds, models, particles, etc.). The codebase remains accessible for learning or inspiration.
 
 > 🖥️ **Windows only** – no installation required. Just unzip and play.  
@@ -12,7 +9,7 @@ This project is a small physics-based basketball arcade game, made as a first ex
 ![Version](https://img.shields.io/badge/version-v1.0.0-blue)
 ![License](https://img.shields.io/github/license/cfrBernard/MaskMapWizard)
 
-## 📸 Features
+## Features
 
 - Fully physics-based throwing system (with spin, velocity and input influence)
 - Arcade-style scoring system with accuracy breakdown
